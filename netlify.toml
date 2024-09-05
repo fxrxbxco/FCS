@@ -1,4 +1,0 @@
-[build]
-  base = "dist"
-  publish = "dist"
-  command = "ng build --prod"
