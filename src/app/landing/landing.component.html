@@ -1,0 +1,29 @@
+<nav id="navbar">
+  <img id="logo" src="assets/img/logo.png" alt="Logo">
+</nav>
+
+<div id="header" class="header">
+  <h1 id="headerTitle">Welcome to Metal Management Solutions</h1>
+</div>
+
+<div id="formContainer" class="container">
+  <!-- New Heading -->
+  <h2 id="mainHeading" style="font-size: 2em; font-weight: bold;">Is your mine reaching its true potential?</h2>
+
+  <!-- New Paragraph -->
+  <p id="descriptionText">Today’s mines run on data. Rethink how your data is managed and utilised. WIRE gives you unprecedented operational visibility to make timeous, better-informed decisions that boost productivity and reduce costs.</p>
+
+  <input id="nameInput" type="text" placeholder="Enter your name" [(ngModel)]="userName">
+  <br> <!-- New line to create space between elements -->
+  <button id="submitButton" (click)="showWelcomeMessage()">Submit</button>
+<div>
+<!-- Image under the button -->
+<img id="image" src="assets/img/Image.png" alt="image">
+</div>
+  
+
+  <!-- Notification element -->
+  <div id="notification" class="notification" [class.show]="showNotification">
+    {{ notificationMessage }} <!-- Display the notification message -->
+  </div>
+</div>
