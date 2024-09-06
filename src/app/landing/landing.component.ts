@@ -16,7 +16,7 @@ export class LandingComponent {
 
   showWelcomeMessage() {
     // Show welcome message
-    this.notificationMessage = 'Welcome to MMS!';
+    this.notificationMessage = 'Welcome to MMS.';
     this.showNotification = true;
 
     setTimeout(() => {
