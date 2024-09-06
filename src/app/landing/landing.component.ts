@@ -15,18 +15,8 @@ export class LandingComponent {
   notificationMessage: string = '';
 
   showWelcomeMessage() {
-    if (!this.userName.trim()) {
-      this.notificationMessage = 'Please enter your name!';
-      this.showNotification = true;
-
-      setTimeout(() => {
-        this.showNotification = false;
-      }, 3000); // Duration for "Please enter your name!" notification
-
-      return;
-    }
-
-    this.notificationMessage = `Welcome to MMS, ${this.userName}!`;
+    // Show welcome message
+    this.notificationMessage = 'Welcome to MMS!';
     this.showNotification = true;
 
     setTimeout(() => {
