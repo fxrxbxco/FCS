@@ -1,5 +1,3 @@
-
-
 :host {
   font-family: 'Montserrat', sans-serif;
   display: block;
@@ -10,58 +8,74 @@
 #navbar {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 15px 40px;
   background-color: white;
   border-bottom: 1px solid #ddd;
 }
 
 #logo {
-  height: 50px;
+  height: 70px;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 40px 30px;
   background-color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 h1 {
   font-weight: 700;
-  font-size: 2.5em; /* Increase size of the h1 */
+  font-size: 3em;
   margin: 0;
-  
+  position: relative;
+  animation: slideInFromTop 1s ease-out;
 }
 
 .container {
-  text-align: center;
-  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 70px 40px;
+  padding: 0;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+  animation: slideInFromLeft 1s ease-out;
 }
 
 h2 {
-  font-size: 2.8em; /* Make the header slightly larger than h1 */
+  font-size: 2.2em;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #c23f1f; /* Updated color code */
+  color: #c23f1f;
 }
 
 #descriptionText {
-  max-width: 600px;
-  margin: 0 auto 30px auto;
+  font-size: 1.2em;
+  max-width: 100%;
+  margin: 0 0 30px 0;
   text-align: left;
 }
 
 input {
-  padding: 10px;
+  padding: 12px;
   margin-top: 20px;
-  width: 200px;
+  width: 100%;
+  max-width: 350px;
   border-radius: 10px;
   border: 1px solid #ccc;
+  font-size: 1.1em;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #000000;
   color: white;
   border: none;
@@ -69,6 +83,7 @@ button {
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
+  font-size: 1.1em;
 }
 
 button:hover {
@@ -76,10 +91,11 @@ button:hover {
 }
 
 #image {
-  margin-top: 30px;
+  margin-top: 0;
   height: auto;
-  width: auto;
-  max-width: 300px;
+  width: 100%;
+  max-width: 500px; /* Reduced size of the image */
+  animation: slideInFromRight 1s ease-out;
 }
 
 .notification {
@@ -97,4 +113,19 @@ button:hover {
 
 .notification.show {
   right: 20px;
+}
+
+@keyframes slideInFromTop {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }

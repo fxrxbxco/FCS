@@ -7,23 +7,21 @@
 </div>
 
 <div id="formContainer" class="container">
-  <!-- New Heading -->
-  <h2 id="mainHeading" style="font-size: 2em; font-weight: bold;">Is your mine reaching its true potential?</h2>
+  <div class="text-content">
+    <h2 id="mainHeading">Is your mine reaching its true potential?</h2>
 
-  <!-- New Paragraph -->
-  <p id="descriptionText">Today’s mines run on data. Rethink how your data is managed and utilised. WIRE gives you unprecedented operational visibility to make timeous, better-informed decisions that boost productivity and reduce costs.</p>
+    <p id="descriptionText">Today’s mines run on data. Rethink how your data is managed and utilised. WIRE gives you unprecedented operational visibility to make timeous, better-informed decisions that boost productivity and reduce costs.</p>
 
-  <input id="nameInput" type="text" placeholder="Enter your name" [(ngModel)]="userName">
-  <br> <!-- New line to create space between elements -->
-  <button id="submitButton" (click)="showWelcomeMessage()">Submit</button>
-<div>
-<!-- Image under the button -->
-<img id="image" src="assets/img/Image.png" alt="image">
-</div>
+    <input id="nameInput" type="text" placeholder="Enter your name" [(ngModel)]="userName">
+    <br>
+    <button id="submitButton" (click)="showWelcomeMessage()">Submit</button>
+  </div>
   
+  <div>
+    <img id="image" src="assets/img/Image.png" alt="image">
+  </div>
 
-  <!-- Notification element -->
   <div id="notification" class="notification" [class.show]="showNotification">
-    {{ notificationMessage }} <!-- Display the notification message -->
+    {{ notificationMessage }}
   </div>
 </div>
