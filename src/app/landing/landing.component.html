@@ -9,12 +9,10 @@
 <div id="formContainer" class="container">
   <div class="text-content">
     <h2 id="mainHeading">Is your mine reaching its true potential?</h2>
-
     <p id="descriptionText">Today’s mines run on data. Rethink how your data is managed and utilised. WIRE gives you unprecedented operational visibility to make timeous, better-informed decisions that boost productivity and reduce costs.</p>
-
     <input id="nameInput" type="text" placeholder="Enter your name" [(ngModel)]="userName">
     <br>
-    <button id="submitButton" (click)="showWelcomeMessage()">Submit</button>
+    <button id="submitButton" (click)="showWelcomeMessage()" [disabled]="!userName">Submit</button>
   </div>
   
   <div>
