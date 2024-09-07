@@ -87,8 +87,8 @@ button {
 }
 
 button:disabled {
-  background-color: #e0e0e0; /* Light gray background for disabled state */
-  color: #a0a0a0; /* Gray text for disabled state */
+  background-color: #e0e0e0; 
+  color: #a0a0a0;
   cursor: not-allowed;
 }
 
@@ -100,7 +100,7 @@ button:hover:not(:disabled) {
   margin-top: 0;
   height: auto;
   width: 100%;
-  max-width: 500px; /* Reduced size of the image */
+  max-width: 500px;
   animation: slideInFromRight 1s ease-out;
 }
 

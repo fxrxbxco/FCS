@@ -15,15 +15,13 @@ export class LandingComponent {
   notificationMessage: string = '';
 
   showWelcomeMessage() {
-    // Show welcome message
+    
     this.notificationMessage = 'Welcome to MMS.';
     this.showNotification = true;
 
     setTimeout(() => {
       this.showNotification = false;
-    }, 15000); // Duration for "Welcome to MMS" notification
-
-    // Clear the textbox after submission
+    }, 15000); 
     this.userName = '';
   }
 }
