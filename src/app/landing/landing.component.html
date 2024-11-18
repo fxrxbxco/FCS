@@ -1,25 +1,167 @@
 <nav id="navbar">
-  <img id="logo" src="assets/img/logo.png" alt="Logo"> 
+  <div id="homelogo"><img id="logo" src="assets/img/logoFCS.png" alt="Logo"></div>
+  <ul id="navLinks"style="font-size: 23px;" >
+    <li><a href="javascript:void(0)" (click)="smoothScroll('homelogo')">Home</a></li>
+    <li><a href="javascript:void(0)" (click)="smoothScroll('formContainer1')">About</a></li>
+    <li><a href="javascript:void(0)" (click)="smoothScroll('formContainer4')">Services</a></li>
+    <li><a href="javascript:void(0)" (click)="smoothScroll('contact')">Contact</a></li> 
+  </ul>
 </nav>
 
-<div id="header" class="header">
-  <h1 id="headerTitle">Welcome to Metal Management Solutions</h1>
+<div id="headerImage" class="header-image">
+  <img src="assets/img/banner3.png" alt="Header Image" class="rounded-image">
 </div>
 
-<div id="formContainer" class="container">
-  <div class="text-content">
-    <h2 id="mainHeading">Is your mine reaching its true potential?</h2>
-    <p id="descriptionText">Today’s mines run on data. Rethink how your data is managed and utilised. WIRE gives you unprecedented operational visibility to make timeous, better-informed decisions that boost productivity and reduce costs.</p>
-    <input id="nameInput" type="text" placeholder="Enter your name" [(ngModel)]="userName">
-    <br>
-    <button id="submitButton" (click)="showWelcomeMessage()" [disabled]="!userName">Submit</button>
+<!-- About Section -->
+<div id="formContainer1" class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 20px;">
+  <div class="text-content" style="flex: 1;padding: 80px; max-width: 50%;background-color: #343c5c;border-radius: 15px;">
+    <h2 id="mainHeading" style="text-align: left;color: #ffffff;">About</h2>
+    <p id="descriptionText" style="color: #ffffff; font-size: 26px; text-align: left;">At FCS, we are a dynamic and forward-thinking security solutions provider, committed to delivering comprehensive and customized risk management strategies to businesses both locally and internationally. As a trusted startup in the security industry, we specialize in safeguarding organizations from evolving threats through a combination of physical security, remote monitoring, risk assessments, and cutting-edge technology.</p>
   </div>
-  
-  <div>
-    <img id="image" src="assets/img/Image.png" alt="image">
-  </div>
-
-  <div id="notification" class="notification" [class.show]="showNotification">
-    {{ notificationMessage }}
+  <div style="flex: 1; text-align: right; padding-right: 80px;">
+    <img id="image" src="assets/img/ABOUT.png" alt="image" style="max-width: 100%; height: auto; padding-top: 60px;">
   </div>
 </div>
+
+<!-- Mission Section -->
+<div id="formContainer2" class="container" style="display: flex; align-items: center; justify-content: space-between;">
+  <div style="flex: 1; text-align: left; padding-left: 80px;">
+    <img id="image" src="assets/img/MISSION.png" alt="image" style="max-width: 100%; height: auto;">
+  </div>
+  <div class="text-content" style="flex: 1; padding-right: 80px; max-width: 50%;">
+    <h2 id="mainHeading" style="text-align: left;">Mission</h2>
+    <p id="descriptionText" style="color: #343c5c; font-size: 26px; text-align: left;">To deliver accurate, up-to-date security solutions with professionalism and expertise, helping our clients identify and proactively mitigate a wide range of security and risk-related challenges.</p>
+  </div>
+</div>
+
+
+<!-- Vision Section -->
+<div id="formContainer3" class="container" style="display: flex; align-items: center; justify-content: space-between;">
+  <div class="text-content" style="flex: 1; padding: 80px; max-width: 50%;background-color: #343c5c;border-radius: 15px;">
+    <h2 id="mainHeading" style="text-align: left;color: #ffffff;">Vision</h2>
+    <p id="descriptionText" style="color: #ffffff; font-size: 26px; text-align: left;">To be the leading provider of innovative and reliable security and risk management solutions, empowering organizations to anticipate, address, and mitigate risks, creating safer and more resilient environments for their people, assets, and operations.</p>
+  </div>
+  <div style="flex: 1; text-align: right; padding-right: 80px;">
+    <img id="image" src="assets/img/3.png" alt="image" style="max-width: 100%; height: auto;">
+  </div>
+</div>
+
+
+<div id="headerImage" class="header-image">
+  <img src="assets/img/BANNER1.png" alt="Header Image" class="rounded-image">
+</div>
+
+<!-- Services Section -->
+
+<div id="formContainer4" class="container" style="display: flex; align-items: center; justify-content: space-between;">
+  <div style="flex: 1; text-align: left; padding-left: 80px;">
+    <img id="image" src="assets/img/2.png" alt="image" style="max-width: 100%; height: auto;">
+  </div>
+  <div class="text-content" style="flex: 1; padding-right: 80px; max-width: 50%;">
+    <h2 id="mainHeading" style="text-align: left;">Services: (To name a few)</h2>
+    <p id="servicesDescription" style="color: #343c5c; font-size: 26px; text-align: left;">Our wide range of services is designed to address critical security and risk management challenges, ensuring tailored solutions to meet the unique needs of our clients. Below are just a few of the key services we offer:</p>
+    <ul id="servicesList" style="color: #343c5c; font-size: 26px; text-align: left;">
+      <li>Risk Assessment &amp; Scoring</li>
+      <li>Emergency/ Chaos Planning</li>
+      <li>Policy &amp; Procedure Development (Physical Risk)</li>
+      <li>Insider Threat Evaluation &amp; Mitigation</li>
+      <li>Route Planning (Domestic &amp; Rest of Africa)</li>
+      <li>Cross Border Facilitation (Physical Risk)</li>
+      <li>High Value Cargo (Transport/Storage)</li>
+      <li>Remote Monitoring Solutions</li>
+    </ul>
+  </div>
+</div>
+
+<div id="formContainer5" class="container" style="display: flex; align-items: center; justify-content: space-between;">
+  <div class="text-content" style="flex: 1; padding: 80px; max-width: 50%;background-color: #343c5c;border-radius: 15px;">
+    <h2 id="mainHeading" style="text-align: left;color: #ffffff;">Sectors: (Usual Clients)</h2>
+    <p id="sectorsDescription" style="color: #ffffff; font-size: 26px; text-align: left;">We work with a diverse range of sectors to deliver innovative and tailored solutions, addressing their unique challenges and goals. Below are some of the key sectors we serve:</p>
+    <ul id="sectorsList" style="color: #ffffff; font-size: 26px; text-align: left;">
+      <li>Mining</li>
+      <li>Warehousing / Freight Forwarding</li>
+      <li>Transport (Domestic &amp; Cross Border)</li>
+      <li>Ports</li>
+      <li>Estates</li>
+      <li>Agriculture</li>
+      <li>Security</li>
+      <li>Government Projects</li>
+    </ul>
+  </div>
+
+  <div style="flex: 1; text-align: right; padding-right: 80px;">
+    <img id="image" src="assets/img/SECTORS.png" alt="image" style="max-width: 100%; height: auto;">
+  </div>
+</div>
+
+
+
+<!-- Footer Section -->
+<footer id="footer" style="background-color: #b1365b; color: white; padding: 50px;height: 300px;border-radius: 15px;">
+  <div style="display: flex; justify-content: space-around; align-items: flex-start; text-align: left;">
+    <!-- Contact Section -->
+    <div>
+      <h3>Contact</h3>
+      <p><strong>FORTIFY CONSULTANCY SERVICES</strong></p>
+      <p>Potchefstroom, North West</p>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div style="text-align: left;">
+      <h3>Follow Us</h3>
+      <a href="https://facebook.com" target="_blank" style="margin-right: 10px;">
+        <img src="assets/img/facebook.png" alt="Facebook" style="width: 24px;">
+      </a>
+      <a href="https://instagram.com" target="_blank" style="margin-right: 10px;">
+        <img src="assets/img/insta.png" alt="Instagram" style="width: 24px;">
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <img src="assets/img/youtube.png" alt="YouTube" style="width: 24px;">
+      </a>
+
+      <p>Tel: <a href="tel:+27791711556" style="color: white; text-decoration: none;">+27 79 171 1556</a></p>
+      <p>Email: <a href="mailto:info&#64;fcsonline.co.za" style="color: white; text-decoration: none;">info&#64;fcsonline.co.za</a></p>
+
+    </div>
+
+    <!-- Newsletter Section -->
+    <div>
+      <h3>Book a Consultation</h3>
+      <form (ngSubmit)="sendEmail()">
+        <input
+          type="text"
+          placeholder="Enter your name*"
+          [(ngModel)]="userName"
+          name="userName"
+          style="padding: 8px; border: 1px solid white; border-radius: 4px; width: 300px; margin-bottom: 10px; display: block;"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Enter your email*"
+          [(ngModel)]="userEmail"
+          name="userEmail"
+          style="padding: 8px; border: 1px solid white; border-radius: 4px; width: 300px; margin-bottom: 10px; display: block;"
+          required
+        />
+        <input
+          type="tel"
+          placeholder="Enter your phone number*"
+          [(ngModel)]="userPhone"
+          name="userPhone"
+          style="padding: 8px; border: 1px solid white; border-radius: 4px; width: 300px; margin-bottom: 10px; display: block;"
+          required
+        />
+        <button
+          type="submit"
+          style="padding: 8px 16px; background-color: white; color: #5E0A0A; border: none; border-radius: 4px; cursor: pointer;"
+        >
+          Book
+        </button>
+      </form>
+    </div>
+    
+    
+  </div>
+</footer>
+
