@@ -76,7 +76,7 @@ export class LandingComponent implements AfterViewInit {
   
     emailjs
       .send(
-        'service_lt0czlg', // Replace with your EmailJS Service ID
+        'service_ce0bn1i', // Replace with your EmailJS Service ID
         'template_gnc1yt5', // Replace with your EmailJS Template ID
         templateParams,
         'nVPvpgqQFuRs32lW_' // Replace with your EmailJS Public Key
