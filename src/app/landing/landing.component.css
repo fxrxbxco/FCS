@@ -76,7 +76,7 @@ nav ul {
 
 #navLinks li a {
   text-decoration: none;
-  color: #b1365b;
+  color: #5d0c1d;
   font-weight: bold;
   padding-right: 50px;
   transition: color 0.3s ease;
@@ -84,7 +84,7 @@ nav ul {
 }
 
 #navLinks li a:hover {
-  color: #5d0c1d;
+  color: #b1365b;
 }
 
 .header-image {
