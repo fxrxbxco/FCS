@@ -50,9 +50,9 @@ export class LandingComponent implements AfterViewInit {
       notification.style.padding = '10px 20px';
       notification.style.backgroundColor = type === 'success' ? '#4CAF50' : '#F44336';
       notification.style.color = 'white';
-      notification.style.borderRadius = '5px';
+      notification.style.borderRadius = '7px';
       notification.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)';
-      notification.style.fontSize = '14px';
+      notification.style.fontSize = '18px';
       notification.style.zIndex = '1000';
       document.body.appendChild(notification);
   
@@ -77,7 +77,7 @@ export class LandingComponent implements AfterViewInit {
     emailjs
       .send(
         'service_ce0bn1i', // Replace with your EmailJS Service ID
-        'template_gnc1yt5', // Replace with your EmailJS Template ID
+        'template_c2dmyar', // Replace with your EmailJS Template ID
         templateParams,
         'nVPvpgqQFuRs32lW_' // Replace with your EmailJS Public Key
       )
