@@ -40,17 +40,38 @@ export class LandingComponent implements AfterViewInit {
   }
 
   sendEmail() {
+    const showNotification = (message: string, type: 'success' | 'error') => {
+      console.log('Notification triggered:', message); // Debug log
+      const notification = document.createElement('div');
+      notification.textContent = message;
+      notification.style.position = 'fixed';
+      notification.style.bottom = '20px';
+      notification.style.right = '20px';
+      notification.style.padding = '10px 20px';
+      notification.style.backgroundColor = type === 'success' ? '#4CAF50' : '#F44336';
+      notification.style.color = 'white';
+      notification.style.borderRadius = '5px';
+      notification.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.2)';
+      notification.style.fontSize = '14px';
+      notification.style.zIndex = '1000';
+      document.body.appendChild(notification);
+  
+      setTimeout(() => {
+        notification.remove();
+      }, 5000);
+    };
+  
     if (!this.userName || !this.userEmail || !this.userPhone) {
-      alert('Please fill out all required fields.');
+      showNotification('Please fill out all required fields.', 'error');
       return;
     }
   
     const templateParams = {
-      rob: this.userPhone,       // Assuming "rob" corresponds to the user's phone
-      to_name: 'Client Name',    // Replace with a specific recipient name or keep it static
-      from_name: this.userName,  // The user's name
-      message: `Email: ${this.userEmail}\nPhone: ${this.userPhone}`, // Custom message combining details
-      reply_to: this.userEmail   // User's email address
+      rob: this.userPhone,
+      to_name: 'Client Name',
+      from_name: this.userName,
+      message: `Email: ${this.userEmail}\nPhone: ${this.userPhone}`,
+      reply_to: this.userEmail,
     };
   
     emailjs
@@ -62,16 +83,17 @@ export class LandingComponent implements AfterViewInit {
       )
       .then(
         () => {
-          alert('Email sent successfully!');
+          showNotification('Email sent successfully!', 'success');
           this.userName = '';
           this.userEmail = '';
           this.userPhone = '';
         },
         (error) => {
-          alert('Failed to send email: ' + error.text);
+          showNotification('Failed to send email: ' + error.text, 'error');
         }
       );
   }
+  
   
   
 
