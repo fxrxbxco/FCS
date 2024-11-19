@@ -1,36 +1,48 @@
-<nav id="navbar" style="width: 100%;">
+<div id="formContainermain"  style="display: flex; align-items: center; justify-content: space-between;">
+  <nav id="navbar" style="width: 100%;">
+    <div id="homelogo"><img id="logo" src="assets/img/logoFCS.png" alt="Logo"></div>
+    <ul id="navLinks"style="font-size: 23px" >
+      <li><a href="javascript:void(0)" (click)="smoothScroll('formContainermain')">Home</a></li>
+      <li><a href="javascript:void(0)" (click)="smoothScroll('formContainer1')">About</a></li>
+      <li><a href="javascript:void(0)" (click)="smoothScroll('formContainer4')">Services</a></li>
+      <li><a href="javascript:void(0)" (click)="smoothScroll('contact')">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+<!-- <nav id="navbar" style="width: 100%;">
   <div id="homelogo"><img id="logo" src="assets/img/logoFCS.png" alt="Logo"></div>
   <ul id="navLinks"style="font-size: 23px" >
-    <li><a href="javascript:void(0)" (click)="smoothScroll('homelogo')">Home</a></li>
+    <li><a href="javascript:void(0)" (click)="smoothScroll('navbar')">Home</a></li>
     <li><a href="javascript:void(0)" (click)="smoothScroll('formContainer1')">About</a></li>
     <li><a href="javascript:void(0)" (click)="smoothScroll('formContainer4')">Services</a></li>
     <li><a href="javascript:void(0)" (click)="smoothScroll('contact')">Contact</a></li> 
   </ul>
-</nav>
+</nav> -->
 
-<div id="headerImage" class="header-image" style=" margin-top: 100px;">
+
+<div id="headerImage" class="header-image" style=" padding-bottom: 50px; margin-top: 100px;">
   <img src="assets/img/banner3.png" alt="Header Image" class="rounded-image">
 </div>
 
 <!-- About Section -->
-<div id="formContainer1" class="container" style="display: flex; align-items: center; justify-content: space-between;">
-  <div class="text-content" style="flex: 1;padding: 80px; max-width: 50%;background-color: #343c5c;border-radius: 25px;">
+<div id="formContainer1" class="container" style="padding-top:150px;padding:80px flex; align-items: center; justify-content: space-between;margin-top: -100px;">
+  <div class="text-content" style="flex: 1;padding: 45px; max-width: 50%;background-color: #343c5c;border-radius: 25px;">
     <h2 id="mainHeading" style="text-align: left;color: #ffffff;">About</h2>
-    <p id="descriptionText" style="color: #ffffff; font-size: 26px; text-align: left;">At FCS, we are a dynamic and forward-thinking security solutions provider, committed to delivering comprehensive and customized risk management strategies to businesses both locally and internationally. As a trusted startup in the security industry, we specialize in safeguarding organizations from evolving threats through a combination of physical security, remote monitoring, risk assessments, and cutting-edge technology.</p>
+    <p id="descriptionText" style="color: #ffffff; font-size: 20px; text-align: left;">At FORTIFY CONSULTANCY SERVICES, we are a dynamic and forward-thinking security solutions provider, committed to delivering comprehensive and customized risk management strategies to businesses both locally and internationally. As a trusted startup in the security industry, we specialize in safeguarding organizations from evolving threats through a combination of physical security, remote monitoring, risk assessments, and cutting-edge technology.</p>
   </div>
-  <div style="flex: 1; padding: 50px;">
-    <img id="image" class="rounded-image" src="assets/img/ABOUT.png" alt="image" style="max-width: 120%; height: auto; border-radius: 15px;">
+  <div style="flex: 1; padding: 25px;">
+    <img id="image" class="rounded-image" src="assets/img/about1.png" alt="image" style="max-width: 100%; height: auto; border-radius: 25px;">
   </div>
 </div>
 
 <!-- Mission Section -->
-<div id="formContainer2" class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 20px;">
+<div id="formContainer2" class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 50px;">
   <div style="flex: 1; text-align: left;">
     <img id="image" class="rounded-image" src="assets/img/MISSION.png" alt="image" style="max-width: 100%; height: auto;border-radius: 25px;">
   </div>
   <div class="text-content" style="flex: 1;max-width: 50%;padding: 85px;">
     <h2 id="mainHeading" style="text-align: left;">Mission</h2>
-    <p id="descriptionText" style="color: #343c5c; font-size: 26px; text-align: left;">To deliver accurate, up-to-date security solutions with professionalism and expertise, helping our clients identify and proactively mitigate a wide range of security and risk-related challenges.</p>
+    <p id="descriptionText" style="color: #343c5c; font-size: 20px; text-align: left;">To deliver accurate, up-to-date security solutions with professionalism and expertise, helping our clients identify and proactively mitigate a wide range of security and risk-related challenges.</p>
   </div>
 </div>
 
@@ -39,7 +51,7 @@
 <div id="formContainer3" class="container" style="display: flex; align-items: center; justify-content: space-between;">
   <div class="text-content" style="flex: 1; padding: 80px; max-width: 50%;background-color: #343c5c;border-radius: 15px;">
     <h2 id="mainHeading" style="text-align: left;color: #ffffff;">Vision</h2>
-    <p id="descriptionText" style="color: #ffffff; font-size: 26px; text-align: left;">To be the leading provider of innovative, reliable security and risk management solutions, empowering organizations to anticipate, address, and mitigate risks, creating safer and more resilient environments for their people, assets, and operations.</p>
+    <p id="descriptionText" style="color: #ffffff; font-size: 20px; text-align: left;">To be the leading provider of innovative, reliable security and risk management solutions, empowering organizations to anticipate, address, and mitigate risks, creating safer and more resilient environments for their people, assets, and operations.</p>
   </div>
   <div style="flex: 1; text-align: right; padding: 50px;">
     <img id="image" class="rounded-image" src="assets/img/SERVICES.png" alt="image" style="max-width: 100%; height: auto; border-radius: 15px;">
@@ -55,12 +67,12 @@
 
 <div id="formContainer4" class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 20px;">
   <div style="flex: 1; text-align: left; padding: 50px;">
-    <img id="image" class="rounded-image" src="assets/img/VISION.png" alt="image" style="max-width: 100%; height: auto;border-radius: 15px;">
+    <img id="image" class="rounded-image" src="assets/img/VISION.png" alt="image" style="max-width: 100%; height: 80%;border-radius: 15px;">
   </div>
   <div class="text-content" style="flex: 1; max-width: 50%; padding: 85px;background-color: #343c5c;border-radius: 15px;">
     <h2 id="mainHeading" style="text-align: left; color: #ffffff;" >Services</h2>
-    <p id="servicesDescription" style="color: #ffffff; font-size: 26px; text-align: left;">Our wide range of services is designed to address critical security and risk management challenges, ensuring tailored solutions to meet the unique needs of our clients. Below are just a few of the key services we offer:</p>
-    <ul id="servicesList" style="color: #ffffff; font-size: 26px; text-align: left;">
+    <p id="servicesDescription" style="color: #ffffff; font-size: 23px; text-align: left;">Our wide range of services is designed to address critical security and risk management challenges, ensuring tailored solutions to meet the unique needs of our clients. Below are just a few of the key services we offer:</p>
+    <ul id="servicesList" style="color: #ffffff; font-size: 20px; text-align: left;padding-top: 25px;">
       <li>Risk Assessment &amp; Scoring</li>
       <li>Emergency/ Chaos Planning</li>
       <li>Policy &amp; Procedure Development (Physical Risk)</li>
@@ -76,8 +88,8 @@
 <div id="formContainer5" class="container" style="display: flex; align-items: center; justify-content: space-between;">
   <div class="text-content" style="flex: 1; padding: 80px; max-width: 50%;border-radius: 15px;">
     <h2 id="mainHeading" style="text-align: left;">Sectors</h2>
-    <p id="sectorsDescription" style="color: #343c5c; font-size: 26px; text-align: left;">We work with a diverse range of sectors to deliver innovative and tailored solutions, addressing their unique challenges and goals. Below are some of the key sectors we serve:</p>
-    <ul id="sectorsList" style="color: #343c5c; font-size: 26px; text-align: left;">
+    <p id="sectorsDescription" style="color: #343c5c; font-size: 23px; text-align: left;">We work with a diverse range of sectors to deliver innovative and tailored solutions, addressing their unique challenges and goals. Below are some of the key sectors we serve:</p>
+    <ul id="sectorsList" style="color: #343c5c; font-size: 20px; text-align: left;padding-top: 25px;">
       <li>Mining</li>
       <li>Warehousing / Freight Forwarding</li>
       <li>Transport (Domestic &amp; Cross Border)</li>
@@ -90,15 +102,15 @@
   </div>
 
   <div style="flex: 1; text-align: right; padding-right: 80px;">
-    <img id="image"  src="assets/img/SECTORS.png" alt="image" style="max-width: 100%; height: auto;border-radius: 15px;">
+    <img id="image"  src="assets/img/SECTORS.png" alt="image" style="max-width: 100%; height: 80%;border-radius: 15px;">
   </div>
 </div>
 
 
 
 <!-- Footer Section -->
-<footer id="footer" style="background-color: #5D0C1D; color: white; padding: 50px;height: 300px;border-radius: 15px;">
-  <div style="display: flex; justify-content: space-around; align-items: flex-start; text-align: left;">
+<footer id="footer" style="background-color: #5D0C1D; color: white; padding: 50px;height: 550px;border-radius: 15px;padding-bottom: 200px;">
+  <div style="display: flex; justify-content: space-around; align-items: flex-start; text-align: center;padding: 80px;">
     <!-- Contact Section -->
     <div>
       <h3>Contact</h3>
@@ -107,25 +119,33 @@
     </div>
 
     <!-- Social Media Icons -->
-    <div style="text-align: left;">
-      <h3>Follow Us</h3>
-      <a href="https://facebook.com" target="_blank" style="margin-right: 10px;">
-        <img src="assets/img/facebook.png" alt="Facebook" style="width: 24px;">
-      </a>
-      <a href="https://instagram.com" target="_blank" style="margin-right: 10px;">
-        <img src="assets/img/insta.png" alt="Instagram" style="width: 24px;">
-      </a>
-      <a href="https://youtube.com" target="_blank">
-        <img src="assets/img/youtube.png" alt="YouTube" style="width: 24px;">
-      </a>
+    <div style="text-align: center;">
 
-      <p>Tel: <a href="tel:+27791711556" style="color: white; text-decoration: none;">+27 79 171 1556</a></p>
-      <p>Email: <a href="mailto:info&#64;fcsonline.co.za" style="color: white; text-decoration: none;">info&#64;fcsonline.co.za</a></p>
+      <h3>Follow Us</h3>
+      <div>
+       
+        <a href="https://facebook.com" target="_blank" style="margin-right: 10px;">
+          <img src="assets/img/facebook.png" alt="Facebook" style="width: 24px;">
+        </a>
+        <a href="https://instagram.com" target="_blank" style="margin-right: 10px;">
+          <img src="assets/img/insta.png" alt="Instagram" style="width: 24px;">
+        </a>
+        <a href="https://youtube.com" target="_blank">
+          <img src="assets/img/youtube.png" alt="YouTube" style="width: 24px;">
+        </a>
+
+      </div>
+      <div style="padding: 24px;text-align: center;">
+
+        <p>Tel: <a href="tel:+27791711556" style="color: white; text-decoration: none;">+27 79 171 1556</a></p>
+        <p>Email: <a href="mailto:info&#64;fcsonline.co.za" style="color: white; text-decoration: none;">info&#64;fcsonline.co.za</a></p>
+
+      </div>    
 
     </div>
 
     <!-- Newsletter Section -->
-    <div id="contact">
+    <div id="contact" style="text-align: center;">
       <h3>Book a Consultation</h3>
       <form (ngSubmit)="sendEmail()">
         <input
@@ -133,7 +153,7 @@
           placeholder="Enter your name*"
           [(ngModel)]="userName"
           name="userName"
-          style="padding: 8px; border: 1px solid white; border-radius: 4px; width: 300px; margin-bottom: 10px; display: block;"
+          style="font-size: 26px;padding: 8px; border: 1px solid white; border-radius: 4px; width: 500px; margin-bottom: 10px; display: block;"
           required
         />
         <input
@@ -141,7 +161,7 @@
           placeholder="Enter your email*"
           [(ngModel)]="userEmail"
           name="userEmail"
-          style="padding: 8px; border: 1px solid white; border-radius: 4px; width: 300px; margin-bottom: 10px; display: block;"
+          style="font-size: 26px;padding: 8px; border: 1px solid white; border-radius: 4px; width: 500px; margin-bottom: 10px; display: block;"
           required
         />
         <input
@@ -149,10 +169,10 @@
           placeholder="Enter your phone number*"
           [(ngModel)]="userPhone"
           name="userPhone"
-          style="padding: 8px; border: 1px solid white; border-radius: 4px; width: 300px; margin-bottom: 10px; display: block;"
+          style="font-size: 26px;padding: 8px; border: 1px solid white; border-radius: 4px; width: 500px; margin-bottom: 10px; display: block;"
           required
         />
-        <button type="submit" style="padding: 15px 16px;background-color: white;color: #5E0A0A;border: none;border-radius: 4px;cursor: pointer;transition: background-color 0.3s, color 0.3s;"onmouseover="this.style.backgroundColor='#343c5c'; this.style.color='white';"onmouseout="this.style.backgroundColor='white'; this.style.color='#5E0A0A';">
+        <button type="submit" style="font-size: 26px; padding: 17px 19px;background-color: white;color: #5E0A0A;border: none;border-radius: 4px;cursor: pointer;transition: background-color 0.3s, color 0.3s;"onmouseover="this.style.backgroundColor='#343c5c'; this.style.color='white';"onmouseout="this.style.backgroundColor='white'; this.style.color='#5E0A0A';">
            Book
         </button>
       </form>

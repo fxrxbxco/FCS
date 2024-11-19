@@ -31,13 +31,24 @@ export class LandingComponent implements AfterViewInit {
 
   smoothScroll(targetId: string) {
     const targetElement = document.getElementById(targetId);
-    if (targetElement) {
+  
+    if (targetId === 'formContainermain') {
+      // Scroll to the top of the page explicitly for "Home"
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    } else if (targetElement) {
+      // Scroll to the specified element
       targetElement.scrollIntoView({
         behavior: 'smooth', // Smooth scrolling
         block: 'start', // Scroll to the start of the section
       });
+    } else {
+      console.error(`Element with ID '${targetId}' not found.`);
     }
   }
+  
 
   sendEmail() {
     const showNotification = (message: string, type: 'success' | 'error') => {
