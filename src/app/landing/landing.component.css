@@ -11,7 +11,84 @@
   box-sizing: border-box; /* Ensures padding and borders don't affect width/height */
 }
 
-body,html {
+/* Default flex container for larger screens */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Contact Section and Newsletter Section */
+#footer-div,
+#contact {
+  flex: 1;
+  min-width: 280px;
+  max-width: 45%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Mobile View: Stack items on top of each other */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  #footer-div,
+  #contact {
+    width: 100%; /* Ensure each item takes full width */
+    padding-left: 0; /* Adjust padding on mobile */
+  }
+
+  /* Optional: Adjust form inputs for mobile */
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px 15px; /* Adjust button size */
+  }
+}
+
+
+/* Default flex container for desktop view */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text-content,
+#aboutimagediv {
+  flex: 1;  /* Ensures both items take equal space */
+  padding: 50px;
+}
+
+/* Mobile View: Stack items on top of each other */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .text-content,
+  #aboutimagediv {
+    width: 100%; /* Ensure each item takes full width */
+    padding: 50px;
+  }
+
+  /* Optional: Adjust the image size for mobile view */
+  #image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+body, html {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
@@ -20,76 +97,82 @@ body,html {
 }
 
 nav {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  position: fixed; /* Or relative, depending on your layout */
+  position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff; /* Optional: Ensure visible background */
-  z-index: 10; /* Keep it above other elements */
-}
-
-nav ul {
-  list-style: none; /* Remove bullet points from nav items */
-  margin: 0;
-  padding: 0;
-  display: flex; /* Align items horizontally */
-}
-
-#navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
+  width: 100%;
+  background-color: #fff;
   z-index: 10;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   transition: background-color 0.3s, box-shadow 0.3s;
-  width: 94%;
-  position: fixed;
-  top: 0; left: 0;
-  padding-left: 20px;
-}
-
-#navbar.scrolled {
-  width: 100px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow when scrolling */
 }
 
 #logo {
-  height: 100px;
+  height: 60px; /* Default for mobile */
+}
+
+.text-content {
+  flex: 1;
+  padding: 80px;
+  max-width: 100%;
+  background-color: #343c5c; /* Ensure this is applied */
+  color: #ffffff; /* Text color for readability */
+  border-radius: 25px;
+  line-height: 1.5;
+  text-align: left; /* Updated to align content properly */
   animation: slideInFromLeft 1s ease-out;
 }
 
+
 #navLinks {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  max-width: 600px;
-  animation: slideInFromRight 1s ease-out;
+  display: none; /* Hidden on mobile by default */
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+#navLinks.active {
+  display: flex; /* Show when active */
 }
 
 #navLinks li {
   text-align: center;
+  padding: 10px 0;
 }
 
 #navLinks li a {
   text-decoration: none;
-  color: #5d0c1d;
+  font-size: 1rem;
+  color: #5d0c1d; /* Original color */
   font-weight: bold;
-  padding-right: 50px;
+  padding: 10px;
+  display: block;
   transition: color 0.3s ease;
-  width: 100%;
 }
 
 #navLinks li a:hover {
   color: #b1365b;
 }
 
+/* Image Responsiveness */
+img {
+  max-width: 100%; /* Ensures images scale down with screen size */
+  height: auto; /* Maintains aspect ratio */
+}
+
 .header-image {
   width: 100%;
   height: auto;
+  padding-bottom: 50px; 
+  margin-top: 100px;
   animation: zoomOut 1.5s ease-out;
 }
 
@@ -102,93 +185,78 @@ nav ul {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 70px 40px;
-  padding: 0;
-}
-
-.text-content {
-  flex: 0 0 35%;
-  max-width: 100%;
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
-  animation: slideInFromLeft 1s ease-out;
-}
-
-h2 {
-  font-size: 2.2em;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #5d0c1d;
-}
-
-h3 {
-  font-size: 2.2em;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-
-
-#descriptionText {
-  font-size: 1.2em;
-  max-width: 100%;
-  margin: 0 0 30px 0;
-  text-align: left;
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
-}
-
 #image {
-  margin-top: 0;
+  width: 100%; /* Ensure the image fills its container */
   height: auto;
-  width: 800;
-  flex: 0 0 65%;
-  max-width: 1000px;
+  border-radius: 25px;
   animation: slideInFromRight 1s ease-out;
 }
 
-@keyframes slideInFromTop {
-  from { transform: translateY(-100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+#aboutimagediv {
+  padding: 25px;
 }
 
-@keyframes slideInFromLeft {
-  from { transform: translateX(-100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+/* Footer Styles */
+#footer {
+  background-color: #5D0C1D; /* Original color */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack content on mobile */
+  align-items: center;
 }
 
-@keyframes slideInFromRight {
-  from { transform: translateX(100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+#footer div {
+  margin: 10px 0;
+  text-align: center;
+  padding: 25px;
 }
 
-@keyframes zoomOut {
-  from {
-    transform: scale(1.2);
-    opacity: 0;
+#toggleButton {
+  display: none !important; /* Default: hidden */
+}
+
+@media (max-width: 768px) {
+  #toggleButton {
+    display: inline-block !important;  /* Show only on screens smaller than 768px */
   }
-  to {
-    transform: scale(1);
-    opacity: 1;
+}
+
+/* Responsive: Tablet and Up */
+@media (min-width: 768px) {
+  #navLinks {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    box-shadow: none;
+  }
+
+  #navLinks li {
+    margin: 0 15px;
+  }
+
+  #logo {
+    height: 80px;
+  }
+
+  #footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
   }
 }
 
-/* ADDITIONAL SCROLL TRANSITION EFFECT */
-.container, .text-content, #image, .header-image img {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+/* Responsive: Desktop and Larger */
+@media (min-width: 1024px) {
+  #navLinks li a {
+    font-size: 1.2rem;
+  }
+
+  .header-image img {
+    max-height: 900px; /* Allow larger images for desktop */
+  }
 }
 
-.container.in-view, .text-content.in-view, #image.in-view, .header-image img.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
 
-/* JavaScript Required: Add 'in-view' class to elements when they enter the viewport */

@@ -31,7 +31,7 @@ export class LandingComponent implements AfterViewInit {
 
   smoothScroll(targetId: string) {
     const targetElement = document.getElementById(targetId);
-  
+
     if (targetId === 'formContainermain') {
       // Scroll to the top of the page explicitly for "Home"
       window.scrollTo({
@@ -48,7 +48,6 @@ export class LandingComponent implements AfterViewInit {
       console.error(`Element with ID '${targetId}' not found.`);
     }
   }
-  
 
   sendEmail() {
     const showNotification = (message: string, type: 'success' | 'error') => {
@@ -66,17 +65,17 @@ export class LandingComponent implements AfterViewInit {
       notification.style.fontSize = '18px';
       notification.style.zIndex = '1000';
       document.body.appendChild(notification);
-  
+
       setTimeout(() => {
         notification.remove();
       }, 5000);
     };
-  
+
     if (!this.userName || !this.userEmail || !this.userPhone) {
       showNotification('Please fill out all required fields.', 'error');
       return;
     }
-  
+
     const templateParams = {
       rob: this.userPhone,
       to_name: 'Client Name',
@@ -84,7 +83,7 @@ export class LandingComponent implements AfterViewInit {
       message: `Email: ${this.userEmail}\nPhone: ${this.userPhone}`,
       reply_to: this.userEmail,
     };
-  
+
     emailjs
       .send(
         'service_ce0bn1i', // Replace with your EmailJS Service ID
@@ -104,9 +103,6 @@ export class LandingComponent implements AfterViewInit {
         }
       );
   }
-  
-  
-  
 
   ngAfterViewInit() {
     const observer = new IntersectionObserver(
@@ -127,5 +123,52 @@ export class LandingComponent implements AfterViewInit {
     );
 
     elementsToAnimate.forEach((el: Element) => observer.observe(el));
+
+    // Initialize toggle button functionality
+    this.initializeNavbarToggle();
   }
+
+  private initializeNavbarToggle() {
+    const navLinks = this.elementRef.nativeElement.querySelector('#navLinks');
+    const navbar = this.elementRef.nativeElement.querySelector('#navbar');
+    const toggleButton = document.createElement('button');
+  
+    // Configure the toggle button
+    toggleButton.textContent = '☰';
+    toggleButton.id = 'toggleButton'; // Add an id for easier targeting in CSS
+    toggleButton.style.fontSize = '24px';
+    toggleButton.style.background = 'none';
+    toggleButton.style.border = 'none';
+    toggleButton.style.cursor = 'pointer';
+    toggleButton.style.color = '#5d0c1d';
+    toggleButton.style.marginLeft = '20px';
+    // toggleButton.style.padding ='20px';
+  
+    // Add toggle button to the navbar
+    navbar.insertBefore(toggleButton, navLinks);
+  
+    // Add a class to ensure proper styling
+    toggleButton.classList.add('dynamic-toggle'); // Optional: Adds extra class for debugging/styling
+  
+    // Add click event listener
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Dynamically show or hide the button based on screen size
+  const updateButtonVisibility = () => {
+    if (window.innerWidth <= 768) {
+      toggleButton.style.display = 'inline-block'; // Show on mobile
+    } else {
+      toggleButton.style.display = 'none'; // Hide on desktop
+    }
+  };
+
+  // Call the function once to set the initial state
+  updateButtonVisibility();
+
+  // Update visibility on window resize
+  window.addEventListener('resize', updateButtonVisibility);
+  }
+  
 }
